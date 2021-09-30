@@ -1,25 +1,28 @@
 # KeyboardHookMonitor
 
-Windows �� Keyboard �̃O���[�o���t�b�N���d�|���A�̎悵���L�[�{�[�h���͏���\�����܂��B
+Windows で Keyboard のグローバルフックを仕掛け、採取したキーボード入力情報を表示します。
 
-���}�́A�u��܂Ԃ�R�v�ƁuKanchokuWS�v���N��������AMS IME �� ON �ɂ��āA
-"d", "o" �ƑŌ������Ƃ��̃L�[�{�[�h���͂�\�����Ă��܂��B
-�u�򒹁v�z��Łu���́v�Ɠ��͂���Ă��܂��B
+下図は、「やまぶきR」と「KanchokuWS」を起動した後、MS IME を ON にして、
+"d", "o" と打鍵したときのキーボード入力を表示しています。
+「飛鳥」配列で「うは」と入力されています。
 
 ![Image](image.png)
 
-���Ȃ݂ɁA extraInfo=1959 �ƂȂ��Ă���̂� KanchokuWS ����� SendInput �ɂ��L�[���o�ŁA
-ScanCode=7f �ƂȂ��Ă���̂���܂Ԃ�R����̃L�[���o�ł��B
+ちなみに、 extraInfo=1959 となっているのが KanchokuWS からの SendInput によるキー送出で、
+ScanCode=7f となっているのがやまぶきRからのキー送出です。
 
-## �N��
-KeyboardHookMonitor.exe ���_�u���N���b�N�ŋN�����Ă��������B���邢�� CMD.EXE ����N�����Ă��������B
+## インストール
+[リリースページ](https://github.com/oktopus1959/KeyboardHookMonitor/releases)から \*.zip ファイルをダウンロードして適当な場所で解凍します。
 
-## �I��
-�u�I���v�{�^�����N���b�N���邩�u�~�v���N���b�N���Ă��������B
+## 起動
+KeyboardHookMonitor.exe をダブルクリックで起動してください。あるいは CMD.EXE から起動してください。
 
-## �ӎ�
-���c�[���́A���L�T�C�g����\�[�X�����p���Ă��܂��B
+## 終了
+「終了」ボタンをクリックするか「×」をクリックしてください。
+
+## 謝辞
+当ツールは、下記サイトからソースを引用しています。
 
 https://aonasuzutsuki.hatenablog.jp/entry/2018/10/15/170958
 
-�T�C�g�̍�� AonaSuzutsuki �l�ɂ����\���グ�܂��B
+サイトの作者 AonaSuzutsuki 様にお礼を申し上げます。
