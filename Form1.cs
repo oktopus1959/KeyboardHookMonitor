@@ -49,7 +49,7 @@ namespace KeyboardHookMonitor
 
         DateTime LastDt = DateTime.MaxValue.AddDays(-1);
 
-        private void onKeyboardDownHandler(KeyboardHook.WM_KEY_STATUS wmKeyStatus, int vkey, int scanCode, int flags, int time, int extraInfo)
+        private void onKeyboardDownHandler(KeyboardHook.WM_KEY_STATUS wmKeyStatus, uint vkey, uint scanCode, uint flags, uint time, uint extraInfo)
         {
             richTextBox1.Focus();
             var dtNow = DateTime.Now;

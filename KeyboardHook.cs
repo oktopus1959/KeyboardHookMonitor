@@ -83,7 +83,7 @@ namespace KeyboardHookMonitor
             WmSysKeyUp
         }
 
-        public delegate void DelegateOnKeyboardEvent(WM_KEY_STATUS wmKeyStatus, int vkey, int scanCode, int flags, int time, int extraInfo);
+        public delegate void DelegateOnKeyboardEvent(WM_KEY_STATUS wmKeyStatus, uint vkey, uint scanCode, uint flags, uint time, uint extraInfo);
 
         public static DelegateOnKeyboardEvent OnKeyboardEvent { get; set; }
 
@@ -98,7 +98,7 @@ namespace KeyboardHookMonitor
 
             if (nCode >= 0 && wmKeyStatus != WM_KEY_STATUS.None) {
                 var kb = (KBDLLHOOKSTRUCT)Marshal.PtrToStructure(lParam, typeof(KBDLLHOOKSTRUCT));
-                OnKeyboardEvent?.Invoke(wmKeyStatus, (int)kb.vkCode, (int)kb.scanCode, (int)kb.flags, (int)kb.time, (int)kb.dwExtraInfo);
+                OnKeyboardEvent?.Invoke(wmKeyStatus, (uint)kb.vkCode, (uint)kb.scanCode, (uint)kb.flags, (uint)kb.time, (uint)kb.dwExtraInfo);
             }
 
             return CallNextHookEx(hookId, nCode, wParam, lParam);
