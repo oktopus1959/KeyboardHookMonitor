@@ -11,6 +11,13 @@ Windows で Keyboard のグローバルフックを仕掛け、採取したキ�
 ちなみに、 extraInfo=1959 となっているのが KanchokuWS からの SendInput によるキー送出で、
 ScanCode=7f となっているのがやまぶきRからのキー送出です。
 
+また下図は「無変換」キーを押したときの出力です。
+
+![Keyboardhookmonitor](keyboardhookmonitor.png)
+
+「KeyCode=1d」のところが仮想キーコードとなります。この例では「無変換」キーの仮想キーコードが
+16進数の 1d であることが分かります。
+
 ## インストール
 [リリースページ](https://github.com/oktopus1959/KeyboardHookMonitor/releases)から \*.zip ファイルをダウンロードして適当な場所で解凍します。
 
